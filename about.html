@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                box-sizing: border-box;
+            }
+            [class*="col-"]{
+                float:left;
+                padding:8px;
+            }
+            .logoimage{
+                margin-left:10%;
+                float:left;
+            }
+           
+             ul li{
+                float:left;
+                padding:18px;
+                list-style-type:none;
+            }
+             ul li a{
+                text-decoration: none;
+                font-size: 20px;
+                color:black;
+                
+            }
+             ul li a:hover{
+                color:lightgray;
+                border-bottom: 2px solid lightgray;
+                
+            }
+            .funlable1{
+                display:none;
+            
+            }
+            .funlable2{
+                display:none;
+            
+            }
+            .sty{
+                text-decoration: none;
+            }
+            .active{
+                color:lightgray;
+                
+            }
+            .styhor:hover{
+                background-color:white;
+                box-shadow: 2px 2px solid white;
+            }
+            .cen{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            .bot{
+                margin-top:10px;
+                padding-right:6%;
+                padding-left:6%;
+            }
+            .bot ul li{
+                list-style-type: none;
+                float:left;
+                margin-right:10px;
+            }
+            .bot ul li a{
+                text-decoration: none;
+                color:black;
+                font-size:15px;
+            }
+            .row::after{
+                clear: both;
+                display:block;
+                content:"";
+            }
+            .h1size{
+                font-size:65px; 
+                text-align:center; 
+                margin-left:9%; 
+                margin-right:9%;
+
+            }
+            .text1{
+                text-align:center; 
+                font-size:18px;
+            }
+            .text2{
+                font-size:50px; 
+                text-align:center; 
+                margin-top:40px;
+            }
+            .box1{
+                
+                margin-left:8%; margin-right:4%; 
+                padding-bottom:20px;
+                
+            }
+            .box1p{
+                font-size:20px; 
+                margin-top:30px;
+                text-align:left;
+                width:80%;
+                line-height: 30px;
+                
+            }
+            .box11{
+                border:1px solid rgb(180,180,180); 
+                margin-left:8%; margin-right:4%; 
+                padding-bottom:20px;
+            }
+            .box11p{
+                font-size:25px; 
+                padding:25px; 
+                text-align:left;
+            }
+            .box12{
+                border:1px solid rgb(180,180,180); 
+                margin-left:0%; margin-right:4%; 
+                padding-bottom:20px;
+                text-align:center;
+            }
+            .box12p{
+                font-size:25px; 
+                 
+                text-align:center;
+            }
+            .box13{
+                border:1px solid rgb(180,180,180); 
+                margin-left:0%; margin-right:4%; 
+                padding-bottom:20px;
+            }
+            .box13p{
+                font-size:25px; 
+                padding:25px; 
+                text-align:left;
+            }
+            .num1{
+                font-size:200px;
+                color:black;
+                border-inline:black;
+            }
+            .box2{
+                
+                margin-right:4%; 
+                padding-bottom:20px;
+            }
+            .box2p{
+                font-size:20px; 
+                margin-top:30px;
+                text-align:left;
+                width:80%;
+                line-height: 30px;
+            }
+            .box3{
+                
+                margin-right:4%; 
+                padding-bottom:20px;
+            }
+            .box3p{
+                font-size:20px; 
+                margin-top:30px;
+                text-align:left;
+                width:80%;
+                line-height: 30px;
+            }
+            .div1{
+                background-color:rgb(240,240,240); 
+                margin-top:150px; 
+                height:auto; 
+                margin-left:8.33%;
+                margin-left:8.33%;
+            }
+            .divimg{
+                float:left; 
+                height:650px; 
+                padding-right:10%;
+            }
+            .divimg1{
+                width:120%; 
+                height:80%; 
+                margin-top:50px;
+            }
+            .div1con{
+                margin-top:200px; 
+                font-size:22px; 
+                margin-right:2%;
+            }
+            .div2h1{
+                margin-top:20px; 
+                font-size:50px;
+            }
+            .box4{
+                height:auto; 
+                margin-left:7%; 
+                margin-right:2%;
+            }
+            .box{
+                height:auto;
+
+            }
+            .box5but{
+                width:158px; 
+                cursor: pointer; 
+                height:50px; 
+                border:2px solid brown;
+                font-size:18px; 
+                margin-top:100px; 
+                margin-left:180px;
+            }
+            .div3{
+                margin-top:200px; 
+                font-size:22px; 
+                margin-right:2%;
+            }
+            .maindiv3{
+              
+                margin-top:150px; 
+                height:auto; 
+                margin-left:8.33%;
+                margin-left:8.33%;
+            }
+            .div3p1{
+                width:80%; 
+                text-align:left;
+                margin-bottom:40px;
+            }
+            .div3img{
+                width:120%; 
+                height:80%; 
+                margin-top:50px; 
+                margin-bottom:30px;
+            }
+            .div3imgdiv{
+                float:left; 
+                height:inherit; 
+                padding-right:10%;
+            }
+            .box6{
+                margin-top:250px; 
+                height:500px;
+                
+            }
+            .box6div1{
+                padding-left:6%; 
+                height:450px; 
+                padding-right:6%; 
+                margin-left:7%; 
+                margin-right:2%;
+            }
+            .box6p{
+                font-size:22px;
+            }
+            .box6h1{
+                margin-top:30px; 
+                margin-bottom: 30px;
+            }
+            .form1{
+                border:1px solid darkgray; 
+                height:450px; 
+                padding-left:3%; 
+                padding-right:3%; 
+                padding-top:30px;
+            }
+            .textbox1{
+                width:100%; 
+                height:50px; 
+                border:1px solld darkgray;
+            }
+            .textbox2{
+                width:100%; height:50px; border:1px solld darkgray;
+            }
+            .form1p{
+                margin-top:30px; width:100%; text-align:justify;
+            }
+            .form1but{
+                width:100%; height:60px; cursor: pointer; border:2px solid brown; font-size:18px; margin-top:50px; color:darkgray;
+            }
+            .line{
+                width:80%; margin-left:50px;
+            }
+            .line2{
+                width:80%; margin-left:50px;
+            }
+            .lucy{
+                 margin-bottom: 30px; text-align:left; font-size:18px;
+            }
+            .div3p2{
+                margin-left:50px; font-size:17px;
+            }
+            .box7{
+                margin-top:150px;
+            }
+            .box8{
+                height:880px;
+            }
+            .div7h1{
+                margin-top:20px; 
+                font-size:50px;
+            }
+            .box7img{
+                width:100%; height:80%;
+            }
+            .box7div1{
+                height:880px; margin-left:7%; margin-right:2%;
+            }
+            .box8div{
+                border:0.5px solid lightgrey; width:100%; height:650px;
+            }
+            .div9{
+                margin-top:200px; height:800px; margin-left:8%;
+                
+                
+            }
+            .box8but{
+                width:158px; 
+                cursor: pointer; 
+                height:50px; 
+                border:2px solid brown;
+                font-size:18px; 
+                margin-top:100px; 
+                margin-left:180px;
+            }
+            .div9img{
+                width:120%; height:80%; margin-top:50px;
+            }
+            .div9box1{
+                float:left; height:inherit; padding-right:10%;
+            }
+            .div9box2{
+                margin-top:200px; text-align:left; font-size:20px; margin-left:2%;
+            }
+            .div9h1{
+                font-size:50px; margin-top:50px; margin-right:5%;
+            }
+            .div9p1{
+                font-size:20px;
+            }
+            .div9but{
+                width:150px; cursor: pointer; height:50px;  font-size:18px; margin-top:60px; margin-left:5%; border:2px solid brown;
+            }
+            .div10h1{
+                font-size:50px;
+            }
+            .insta{
+                font-size:40px; color:black;
+            }
+            .pin{
+                font-size:40px; margin-left:30px; color:black;
+            }
+            .div10line{
+                margin-top:150px; margin-left:6%; margin-right:6%; color:lightgrey;
+            }
+            .botmenu{
+                width:130px;
+                
+            }
+            .botmenua3{
+                width:180px;
+            
+            }
+            .div11p1{
+                margin-top:20px; float:right;
+                
+                
+            }
+            #menuicon{
+                font-size:30px;
+                cursor: pointer;
+                float:right;
+                display:none;
+
+                
+            }
+            #menuicon1{
+                font-size:30px;
+                cursor: pointer;
+                float:right;
+                display:none;
+
+                
+            }
+            .midlecondiv{
+                width:80%;
+                margin-left:8%;
+                margin-right:8%;
+                padding:0px;
+                
+
+            }
+            .midlecondiv p{
+                margin-bottom:30px;
+                font-size:22px;
+                text-align:left;
+                width:100%;
+            }
+            .pressprcon{
+                width:100%;
+                
+                padding:0;
+                
+            }
+            .proudcon{
+                font-size:20px;
+                line-height: 30px;
+                margin-left:30px;
+                
+
+            }
+            .presscon{
+                margin-left:20px;
+            }
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+            @media all and (min-width: 894px){
+            
+                
+                
+            }
+        
+            @media all and (max-width: 893px){
+                [class*="col-"]{
+                    width:100%;
+
+                }
+                .sty{
+                    text-align:center;
+                    
+                    
+                }
+                .h1siz{
+                    font-size:33px;
+                }
+                .text1{
+                    font-size:14px;
+                    
+                }
+                .text2{
+                    font-size:33px;
+                }
+                .box1{
+                    margin-bottom:50px;
+                    margin-left:8%;
+                    margin-right:8%;
+                    width:84%;
+                }
+                .box1p{
+                    font-size:22px;
+                    padding:15px;
+
+                }
+                .box2{
+                    margin-bottom:50px;
+                    margin-left:8%;
+                    margin-right:8%;
+                    width:84%;
+                }
+                .box2p{
+                    font-size:22px;
+                    padding:15px;
+                }
+                .box3{
+                    
+                    margin-left:8%;
+                    margin-right:8%;
+                    width:84%;
+                }
+                .box3p{
+                    font-size:22px;
+                    padding:15px;
+                }
+                .div1{
+                    margin-left:8%;
+                    margin-right:8%;
+                    width:84%;
+                }
+                .div1con{
+                    margin-top:50px;
+                    margin-left:6%;
+                    margin-right:6%;
+                    width:88%;
+                    
+                }
+                .divimg{
+                    margin-left:0%;
+                    margin-right:0%;
+                    width:100%;
+
+                }
+                .divimg1{
+                    margin-left:0%;
+                    margin-right:0%;
+                    width:108.5%;
+                }
+                .div2h1{
+                    font-size:33px;
+                }
+                .box4{
+                    margin-left:6%;
+                    margin-right:6%;
+                    width:88%;
+                    margin-bottom: 40px;
+                }
+                .box5{
+                    margin-left:6%;
+                    margin-right:6%;
+                    width:88%;
+                    
+                }
+                .box5but{
+                    margin-left:33%;
+                
+
+                }
+                .div3{
+                    margin-left:8%;
+                    margin-right:8%;
+                    width:84%;
+                    margin:60Px;
+                }
+                .maindiv3{
+                    
+                    margin-left:0%;
+                    margin-right:0%;
+                    width:100%;
+                    
+                }
+                .div3p1{
+                    width:90%;
+                    margin-left:5%;
+                    margin-right:5%;
+                    
+                }
+                .div3img{
+                    width:80%;
+                    margin-left:10%;
+                    margin-right:10%;
+                    
+                    
+                }
+                .div3imgdiv{
+                     padding-right:0;
+                     padding-left:0;
+
+                }
+                .box6{
+                    padding-left:0;
+                    padding-right:0;
+                    height:auto;
+                    width:100%;
+                    margin-top:170px;
+                    
+                }
+                .box6div1{
+                    width:90%;
+                    height:auto;  
+                    padding-left:0%;
+                    Padding-right:0%;
+                    margin-left:5%;
+                    margin-right:5%;
+                    
+                    margin-bottom: 60px;
+                }
+                .box6p{
+                    font-size:18px;
+                    width:100%;
+
+                }
+                .form1{
+                    border:1px solid darkgray;
+                    width:90%;
+                    margin-left:5%;
+                    margin-right:5%; 
+                    padding-left:0; 
+                    padding-right:0; 
+                    
+                }
+                .lable1{
+                    margin-left:10%;
+                    padding-top:10%;
+                }
+
+                .textbox1{
+                    width:80%;
+                    margin-right:10%;
+                    margin-left:10%;
+                    
+                     
+                    
+                }
+                .lable2{
+                    margin-left:10%;
+                    padding-top:10%;
+                }
+
+                .textbox2{
+                    width:80%;
+                    margin-right:10%;
+                    margin-left:10%;
+                    
+                     
+                    
+                }
+                .form1p{
+                    width:80%;
+                    margin-right:10%;
+                    margin-left:10%;
+                }
+                .form1but{
+                    width:80%;
+                    margin-right:10%;
+                    margin-left:10%;
+                }
+                .line2{
+                    width:84%; 
+                    margin-left:6%;
+                    margin-right:8%;
+                    
+                    
+                    
+                }
+                .lucy{
+                    width:84%; 
+                    margin-left:6%;
+                    
+                    
+                }
+                .div3p2{
+                    width:84%; 
+                    margin-left:6%;
+                }
+                
+                .box7div1{
+                    margin-left:6%;
+                    margin-right:6%;
+                    width:88%;
+                }
+
+                .div7h1{
+                    font-size:33px;
+                }
+                .box7img{
+                    width:100%; height:80%;
+                }
+                .box8{
+                    margin-left:6%;
+                    margin-right:6%;
+                    width:88%;
+                    
+                }
+                .box8div{
+                     width:100%; 
+                     height:auto;
+                     padding-bottom: 30px;
+
+                }
+                .box8but{
+                    margin-left:33%;
+                
+
+                }
+                .div9{
+                    margin-top:60px; height:auto; 
+                    margin-left:6%;
+                    margin-right:6%;
+                    width:88%;
+                    padding-left:0;
+                    padding-right:0;
+                   
+
+                }
+                .div9box1{
+                     height:auto; 
+                     padding-right:0;
+                     padding-left:0;
+                     width:100%;
+                     
+                }
+                .div9img{
+                    width:90%; height:auto; margin-top:0px;
+                    margin-left:10%;
+                    margin-right:10%;
+                    padding-left:0;
+                    padding-right:0;
+                   
+                }
+                .div9box1{
+                    float:left; height:inherit; padding-right:10%;
+                }
+                .div9box2{
+                    margin-top:50px; text-align:left; font-size:14px;
+                }
+                .div9h1{
+                    font-size:33px; margin-left:6%; margin-right:6%;
+                }
+                .div9p1{
+                    font-size:20px;
+                    margin-left:6%;
+                    margin-right:6%;
+                }
+                .div9p2{
+                    font-size:20px;
+                    margin-left:6%;
+                    margin-right:6%;
+                }
+                .div9but{
+                      font-size:14px; margin-top:60px; margin-left:33%; border:2px solid brown;
+                }
+                .div10h1{
+                    font-size:33px;
+                }
+                .insta{
+                    font-size:30px;
+                }
+                .pin{
+                    font-size:30px;
+                }
+                .div10line{
+                    margin-top:60px;
+                }
+                .botmenu{
+                    
+                    width:100%;
+                    
+                
+                }
+                .botmenua3{
+                    
+                    width:100%;
+                    
+                
+                }
+                .div11{
+                    
+                    margin-top:-90px;
+                }
+                .div11p1{
+                     margin-right:0px;
+                     padding-left:22px;
+                     
+                }
+                .logoimage{
+                    margin-left:0;
+                    padding-left:10%;
+                    width:60%;
+                    
+                }
+                
+                #menuicon{
+                    display:block;
+                    float:right;
+                    padding-right:50px;
+
+                }
+                #menuicon1{
+                    display:none;
+                    float:right;
+                    padding-right:50px;
+
+                }
+                
+                
+                .displaymenu li{
+                    width:100%;
+                    padding-left:30px;
+                    
+                    
+                    display:block;
+                    
+                }
+                .midlecondiv{
+                    width:80%;
+                    margin-left:8%;
+                    margin-right:8%;
+                    padding:0px;
+                }
+                .displaymenu{
+                    display:none;
+                }
+                .presscon{
+                    margin-left:0px;
+                }
+            
+                .proudcon{
+                    font-size:18px;
+                    margin-left:0px;
+                    
+
+                }
+                .pressprcon{
+                    width:80%;
+                    margin-left:10%;
+                    margin-right:10%;
+                    
+                }
+               
+            }
+
+            
+        </style>
+
+    </head>
+    <body>
+        <div class="col-12" style="background-color:#804000; margin-bottom: 50px;">
+            <a href="#" class="col-2 sty" style="color:white; font-style:italic; padding-left:30px;">Just Launged...</a>
+            <a href="#" class="col-5 sty" style="float:right; color:white; padding-left:30px;   ">One to one clarity sessions for purposeful founders + designers.</a>
+        </div>
+        <div>
+            <div class="col-2"><a href="#" class="col-2 logoimage"><img src="logoimg.png"></a>
+            <lable id="menuicon"   class="funlable1" onclick="showmenu(), showmenu3()"><i class="fa fa-bars" aria-hidden="true"></i></lable>
+            <lable id="menuicon1"  class="funlable2"  onclick="showmenu2()"><i class="fa fa-times" aria-hidden="true"></i></lable>
+            </div>
+            
+            <div class="col-8" style="float:right;">
+                    <ul class="displaymenu" id="showmenu1">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="working-togather.html">Working togather</a></li>
+                        <li><a href="Recourses.html">Recourses</a></li>
+                        <li><a href="blog.html">blogs</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    
+            </div>
+        </div>  
+        <script>
+            function showmenu(){
+                var t=document.getElementById("showmenu1");
+                t.style.display="block";
+            }
+        </script>
+        <div class="col-12" style="margin-top:100px;">
+            <h1 class="h1siz h1size">Meaning, intention, purpose. They’re everything, right?</h1>
+            <p style="text-align:center; margin-top:70px; font-size:18px; color:rgb(50,50,50);"><b>For brands. For businesses. <i>For all of us.</i></i></b></p>
+        </div>
+        <div class="col-12" style="height:20%; margin-top:120px; padding:0; margin-bottom:200px;">
+            <img src="aboutimg1.jpg" style="width:100%; height:100%;">
+            
+        </div>
+        <div class="midlecondiv col-10">
+            <p>There’s no denying that a beautiful brand and website will satisfy the eye, but combine that with clarity, strategy, an inspired vision and a willingness to do things differently, and you have the potential to connect to the heart and soul of your dreamiest clients and customers, and compel them to take action.</p>
+            <p>A £55,000 launch weekend for an online course, a 200% return on investment within a business’ first week of online sales, a product on the shelves of a nationwide retailer, a brand and online store with double the industry average conversion rate – these are just some of the results that I’ve been able to help my clients to create.</p>
+            <p>Each and every month, there are millions of interactions with brands and websites I’ve helped to bring to life. This is the power of intentional design.</p>
+        </div>
+        <div class="col-10 div9">
+            <div class="col-6 div9box1">
+                <video  controls autoplay loop    class="div9img" >
+                    <source src="aboutvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="col-5 div9box2">
+                <p class="div9p2">/ style</p>
+               <h1 class="div9h1">A bold, energetic and confident style.</h1><br><br><br>
+               <p class="div9p1">My intuitive creative style lends itself to decisive, premium and visionary brands who are ready to cut through in their industry and connect with their audience on a deeper level.</p><br>
+            
+               
+            
+            </div>
+        </div> 
+        <div class="col-10 maindiv3">
+            <div class="col-6 div3">
+                <p class="lucy">/ Values</p>
+                <h1 class="div3p1">Guiding principles</h1>
+                <p>There are three key principles that run through</p>
+                <br>
+                <p>everything that I do…</p>
+            </div>
+            <div class="col-5 div3imgdiv">
+                <img src="aboutimg2.jpg" class="div3img" >
+            </div>    
+        </div>  
+        <div class="col-12" style=" padding:0; margin-top:100px;">
+            <div class="col-3 styhor box1">
+                <h1 class="num1">01</h1>
+                <h1 style="text-align: left;">Meaningful</h1>
+                <p class="box1p">Let’s amplify your magic and create an aligned brand and website that connects, engages and inspires your dreamiest clients and customers.</p>
+                
+            </div>
+            <div class="col-3 styhor box2">
+                <h1 class="num1">02</h1>
+                <h1 style="text-align: left;">Collaborative</h1>
+                <p class="box2p">Two hour, one to one clarity sessions to give you the confidence you need to move forward with your business, brand, and website.</p>
+               
+            </div>
+            <div class="col-3 styhor box3">
+                <h1 class="num1">03</h1>
+                <h1 style="text-align: left;">Thoughtful</h1>
+                <p class="box3p">Insightful resources, products, blogs and articles to help you elevate your brand knowledge, confidence, strategy, clarity, and aesthetic.</p>
+               
+            </div>
+        </div>
+        <div class="col-12" style="height:20%; margin-top:120px; padding:0; margin-bottom:200px;">
+            <img src="aboutimg3.jpg" style="width:100%; height:100%;">
+            
+        </div>
+        <div class="col-12 pressprcon">
+            <div class="col-4">
+                <h1 class="presscon">Press, publications and features</h1>
+            </div>
+            <div class="col-6 proudcon">
+                <p>I’m proud that my work and I have been featured on industry leading websites and in publications around the world.</p>
+                <br><br><br>
+                <a href="#"style="text-decoration: none; color:black;"><p><b>Awwwards</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>Honors and Mobile Excellence Award</h3></a><br><br><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>Mindsparkle Magazine</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>Site of the Day</h3></a><br><br><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>Beyond the Stories · Podcast</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>Running an intentional business, with Jack Watkins</h3></a><br><br><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>The Brand Stylist</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>Elevate, Class of 2019</h3></a><br><br><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>Webdesigner Depot</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>20 Best New Portfolios</h3></a><br><br><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>Product Disrupt</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>Best Portfolio Websites</h3></a><br><br><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>Design Shack</b></p></a>
+            <br>
+            <a href="#" style="text-decoration: none; color:black; color:brown;"><h3>15 Typography Trends for 2020</h3></a>
+            </div>
+
+        </div>
+
+        <div class="col-12 pressprcon " style="margin-top:200px;">
+            <div class="col-4">
+                <h1 class="presscon">Experience</h1>
+            </div>
+            <div class="col-6 proudcon">
+                <p>Before founding my own business, I worked as an in house designer for an international sportswear company, before becoming the Senior Designer for an award winning digital agency.</p>
+                <br><br>
+                <p>Working on projects for household names, as well as continued professional development, allows me to stay informed of best practices, industry insights and contemporary techniques across brand, web, design and development, and this is key to my knowledge over assumptions approach.</p>
+                <br><br>
+                <p>You may be wondering how I’ve fit all of this into my life so far, and well, I’m probably older than my baby face would have you believe!</p>
+                
+            </div>
+
+        </div>
+        <div class="col-12 pressprcon" style="margin-top:200px;">
+            <div class="col-4">
+                <h1 class="presscon">On the vision board…</h1>
+            </div>
+            <div class="col-6 proudcon">
+                <p>Whilst all big thinkers and visionary founders are welcome here, here’s a glimpse into some of the brands and businesses I’d love to collaborate with on intentional brands and websites. Dream big!</p>
+                <br><br><br>
+                <a href="#"style="text-decoration: none; color:black;"><p><b>A five star hotel, nestled in nature.</b></p></a>
+            
+            <a href="#" style="text-decoration: none; color:black;"><h3><i>I may need to stay for market research.</i></h3></a><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b><del>An English vineyard.</del></b></p></a>
+            
+            <a href="#" style="text-decoration: none; color:black;"><h3><i>In progress, yay!</i></h3></a><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>An award winning restaurant.</b></p></a>
+            
+            <a href="#" style="text-decoration: none; color:black; "><h3><i>Imagine the menu design!</i></h3></a><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b><del>A leading theatre school.</del></b></p></a>
+            
+            <a href="#" style="text-decoration: none; color:black;"><h3><i>In progress, wahoo!</i></h3></a><br>
+            <a href="#"style="text-decoration: none; color:black;"><p><b>An international pop star or musician.</b></p></a>
+            
+            <a href="#" style="text-decoration: none; color:black;"><h3><i>Oh hi, Beyoncé!</i></h3></a><br><br>
+            
+            </div>
+
+        </div>
+     
+       <div class="col-12" style="background-color:black; text-align:center; height:800px; padding-top:20%;">
+            <h1 style="color:white; font-size:50px;">Could this be the start of something?</h1><br><br>
+            <p style="color:white; font-size:20px;">Dreamers, doers, deep thinkers and visionary founders. I’d love to hear from you.</p><br>
+            <br><a href="#"></a>><button style="height:50px; width:120px; background-color:black; color:white; border:1px solid brown; ">Let's Talk <i class="fa fa-arrow-right" style="color:lightslategrey;" aria-hidden="true"></i></button></a>
+
+       </div>
+       <div class="col-12" style="margin-top:150px;">
+            <div class="col-5 box4">
+                <a href="#" style="text-decoration: none; color:black;"><b>/ Recent projects</b></a>
+                <h1 class="div2h1">Thoughtfully designed, confidently crafted.</h1>
+                <a href="#" style="text-decoration: none; color:black;"> <div style="border:0.5px solid lightgrey; width:100%; height:650px; margin-top:40px;">
+                    <img src="img4.jpg" style="width:100%; height:80%;">
+                    <h2 style="margin-left:30px; margin-top:30px;">The Litvinjov Academy</h2>
+                    <br>
+                    
+                    <p style="margin-left:30px;">Renowned for its modern and rigorous approach to ballet, this academy nurtures exceptional talent.</p>
+
+                </div></a>
+            </div>   
+            <div class="col-5 box5">
+                    
+                    <a href="#" style="text-decoration: none; color:black;"><div style="border:0.5px solid lightgrey; width:100%; height:650px;">
+                        <img src="img5.jpg" style="width:100%; height:80%; margin-bottom: 30px;">
+                        <p style="margin-left:30px; text-decoration: none; color:black; font-size: 22px;"><b>Breen</b></p>
+                        <br>
+                        
+                        <p style="margin-left:30px;">An immersive hotel, rooted in nature, on the edge of one of Norway’s most awe inspiring fjords.</p>
+    
+                    </div></a>
+                    
+                   <a href="#" ><button type="button" class="box5but">Projects →</button></a>
+            </div>
+        </div>
+        <div class="col-12" style="margin-top:150px;">
+            <p class="text1"><b>Ways to work together</b></p>
+            <h1 class="text2"><b>Let’s elevate your brand.</b></h1>
+        </div>
+        <div class="col-12" style=" padding:0; margin-top:40px;">
+            <div class="col-3 styhor box11">
+                <p class="box1p">Let’s amplify your magic and create an aligned brand and website that connects, engages and inspires your dreamiest clients and customers.</p>
+                <a href="#" style="font-size:20px; padding:15px; ; text-align:left; text-decoration: none; color:rgb(150,80,80)">→ Brand + Website design</a>
+            </div>
+            <div class="col-3 styhor box12">
+                <p class="box2p">Two hour, one to one clarity sessions to give you the confidence you need to move forward with your business, brand, and website.</p>
+                <a href="#" style="font-size:20px; padding:15px; ; text-align:left; text-decoration: none; color:rgb(150,80,80)">→ 1:1 Clarity Sessions</a>
+            </div>
+            <div class="col-3 styhor box13">
+                <p class="box3p">Insightful resources, products, blogs and articles to help you elevate your brand knowledge, confidence, strategy, clarity, and aesthetic.</p>
+                <a href="#" style="font-size:20px; padding:15px; ; text-align:left; text-decoration: none; color:rgb(150,80,80)">→ Resources</a>
+            </div>
+        </div>
+       
+        
+                
+        </div>
+        <div class="col-12"style="margin-top:80px; text-align:center;">
+
+            
+            <hr class="div10line">
+        </div>
+        <div class="col-12 bot div11">
+            <ul class="col-7">
+                <li class="botmenu"><a href="#">Terms of use</a></li>
+                <li class="botmenu"><a href="#">Privacy policy</a></li>
+                <li class="botmenua3"><a href="#">No cookies or tracking</a></li>
+                <li class="botmenu"><a href="#"> Back to top</a></li>
+                
+            </ul>
+            <P class="col-3 div11p1">Copyright © 2020 · Jack Watkins Limited</p>
+        </div>
+        <script>
+            function showmenu3(){
+                
+                document.getElementById("menuicon").style.display="none";
+                document.getElementById("menuicon1").style.display="block";
+            }
+            function showmenu2(){
+                var t=document.getElementById("showmenu1");
+                t.style.display="none";
+                document.getElementById("menuicon1").style.display="none";
+                document.getElementById("menuicon").style.display="block";
+                
+            }
+        </script>
+    </body>
+        <br>
+</html>

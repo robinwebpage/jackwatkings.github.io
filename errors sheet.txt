@@ -1,0 +1,17 @@
+Home
+Projects
+Recourse
+blogs
+about
+
+
+-------------------
+Errors
+
+1 Home page and all pages
+
+Menu
+
+2 about 
+
+video controls and autoplay
